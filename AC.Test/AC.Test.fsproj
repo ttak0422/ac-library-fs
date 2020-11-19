@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -7,10 +7,8 @@
     <ProjectReference Include="..\AC\AC.fsproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumerationTest.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-  <PropertyGroup>
-    <GenerateProgramFile>false</GenerateProgramFile>
-  </PropertyGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
