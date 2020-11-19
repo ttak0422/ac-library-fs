@@ -4,6 +4,7 @@
 <a href="https://builtwithnix.org">
 <img src="https://builtwithnix.org/badge.svg">
 </a>
+<img src="https://img.shields.io/github/workflow/status/ttak0422/ac-library-fs/CI?style=for-the-badge">
 <img src="https://img.shields.io/github/license/ttak0422/ProjectTemplate?style=for-the-badge">
 </div>
 
