@@ -2,7 +2,6 @@
 
 open System
 open Expecto
-open Expecto
 open AC 
 
 [<Tests>]
