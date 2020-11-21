@@ -3,3 +3,7 @@ image:
 
 tasks:
   - init: ./fake.sh build
+vscode:
+  extensions:
+    - ms-dotnettools.csharp@1.23.6:qOOlFzbLQsGAgQYbPRugSw==
+    - Ionide.Ionide-fsharp@4.17.0:bmfJCutIdcgy3vLll5XhTA==
