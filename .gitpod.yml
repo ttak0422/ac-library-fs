@@ -1,8 +1,0 @@
-image: 
-  file: .gitpod/Dockerfile
-
-tasks:
-  - init: ./fake.sh build
-vscode:
-  extensions:
-    - Ionide.Ionide-fsharp@4.6.3:XdK25wIn7uNqBF8OMFreqQ==

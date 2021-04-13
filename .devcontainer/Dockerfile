@@ -1,1 +1,0 @@
-FROM mcr.microsoft.com/vscode/devcontainers/dotnetcore:dev-3.1
