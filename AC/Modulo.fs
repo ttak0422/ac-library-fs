@@ -6,5 +6,7 @@ let inline modPown (mod': 'a) (x: 'a) n =
             match n % 2 with
             | 0 -> f acc ((x * x) % mod') (n >>> 1)
             | _ -> f ((acc * x) % mod') ((x * x) % mod') (n >>> 1)
-        else acc
+        else
+            acc
+
     f LanguagePrimitives.GenericOne x n
