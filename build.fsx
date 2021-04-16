@@ -60,8 +60,24 @@ Target.create "CodeFormat" (fun _ ->
   |> printfn "Formatted files: %A"
 )
 
+Target.create "CodeFormatCheck" (fun _ ->
+  let result = 
+    !!"./**/*.fs"
+    |> FakeHelpers.checkCode 
+    |> Async.RunSynchronously
+  
+  if result.IsValid then 
+    Trace.log "No files need formatting."
+  elif result.NeedsFormatting then 
+    Trace.log "The following files needs formatting:"
+    result.Formatted |> List.iter Trace.log
+    failwith "Some files need formatting."
+  else
+    failwithf "Errors occured while formatting: %A" result.Errors
+)
+
 Target.create "All" ignore
 
-"Clean" ==> "Restore" ==> "CodeFormat" ==> "Test" ==> "All"
+"Clean" ==> "Restore" ==> "CodeFormatCheck" ==> "Test" ==> "All"
 
 Target.runOrDefault "All"
